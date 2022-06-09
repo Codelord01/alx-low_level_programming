@@ -1,1 +1,1 @@
-More functions 
+Learning more about functions 
