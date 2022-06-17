@@ -1,5 +1,5 @@
 /**
- * _strcat - concatenates two strings
+ * _strncat - concatenates two strings
  * @dest: stores value for first string
  * @src: stores value for second string
  * Return: Returns a character that holds the concatenated string
@@ -15,7 +15,7 @@ char *_strncat(char *dest, char *src, int n)
 		len++;
 	}
 
-	while (src[i] != '\0' && i < n )
+	while (src[i] != '\0' && i < n)
 	{
 		dest[len] = src[i];
 		i++;
