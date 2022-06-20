@@ -1,22 +1,22 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * print_chessboard - prints chessboard.
- *
- * @a: rows.
- * Return: nothing.
+ * print_diagsums - description
+ * @a: 2d array of int types
+ * @size: size of array (square)
  */
-void print_chessboard(char (*a)[8])
-{
-	int i, j;
 
-	for (i = 0; i < 8; i++)
+void print_diagsums(int *a, int size)
+{
+	int i, sum1 = 0, sum2 = 0;
+
+	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar(a[i][j]);
-		}
-		_putchar('\n');
+		sum1 += a[i];
+		sum2 += a[size - i - 1];
+		a += size;
 	}
+	printf("%d, ", sum1);
+	printf("%d\n", sum2);
 }
 
