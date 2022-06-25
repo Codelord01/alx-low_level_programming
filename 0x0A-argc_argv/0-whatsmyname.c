@@ -1,15 +1,17 @@
 #include<stdio.h>
 /**
- * main - this is main function where everything is executed
- * @argc: this stores the number of arguments passed
- * @argv: this stores the arrays being passed
- * Return: returns and integer 0
- */
+ * main - is a function that prints the name.
+ *@argc: is an argument counter for char.
+ *@argv: is an agument value for char.
+ *Return: Returns always success.
+**/
 
 int main(int argc, char *argv[])
 {
-	int i = argc - argc;
+int i = argc - argc;
 
-	printf("%s \n", argv[i]);
-	return (0);
+printf("%s\n", argv[i]);
+
+return (0);
 }
+
