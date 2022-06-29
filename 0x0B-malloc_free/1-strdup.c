@@ -33,6 +33,6 @@ char *_strdup(char *str)
 		i++;
 	}
 
-	new_loc[sizeof(str) + 1] = '\0';
+	new_loc[len + 1] = '\0';
 	return (new_loc);
 }
