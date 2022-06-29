@@ -1,3 +1,5 @@
+#include<stdlib.h>
+#include<stdio.h>
 /**
  * create_array - create an array and initializes with a specific char
  * @size: stores the size of the array
@@ -24,4 +26,5 @@ char *create_array(unsigned int size, char c)
 	{
 		arr[i] = c;
 	}
+	return (arr);
 }
