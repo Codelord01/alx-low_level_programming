@@ -9,7 +9,7 @@
 
 char *_strdup(char *str)
 {
-	char *new_loc = malloc(sizeof(str));
+	char *new_loc = malloc(sizeof(str) + 1);
 	unsigned int i = 0;
 
 	if (str == NULL)
@@ -26,5 +26,6 @@ char *_strdup(char *str)
 		i++;
 	}
 	}
+	new_loc[sizeof(str) + 1] = '\0';
 	return (new_loc);
 }
