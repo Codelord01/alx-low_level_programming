@@ -9,23 +9,30 @@
 
 char *_strdup(char *str)
 {
-	char *new_loc = malloc(sizeof(str) + 1);
-	unsigned int i = 0;
+	char *new_loc;
+	unsigned int i = 0, len = 0;
 
 	if (str == NULL)
 		return (NULL);
+
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+
+	new_loc = malloc(sizeof(char) * (len + 1));
+
 	if (new_loc == NULL)
 	{
 		return (NULL);
 	}
-	else
-	{
+
 	while (str[i] != '\0')
 	{
 		new_loc[i] = str[i];
 		i++;
 	}
-	}
+
 	new_loc[sizeof(str) + 1] = '\0';
 	return (new_loc);
 }
