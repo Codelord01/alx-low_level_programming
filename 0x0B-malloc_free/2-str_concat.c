@@ -31,7 +31,7 @@ char *check_null(char *s1, char *s2)
 	}
 	else if (s1 == NULL && s2 != NULL)
 	{
-		new = malloc(sizeof(char) * n);
+		new = malloc(sizeof(char) * sizeof(s2 - 1));
 		if (new == NULL)
 			return (NULL);
 		while (s[j] != '\0')
