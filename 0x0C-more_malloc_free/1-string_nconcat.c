@@ -54,7 +54,7 @@ char *check_null(char *s1, char *s2, unsigned int n)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *new_string;
-	unsigned int len1 = 0, len2 = 0, i = 0, j = 0;
+	unsigned int len1 = 0, len2 = 0, i = 0, j = 0, k = 0, l = 0;
 
 	if (s1 == NULL || s2 == NULL)
 		check_null(s1, s2, n);
@@ -70,11 +70,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			new_string[j] = s1[i];
 			i++, j++;
 		}
-		i = 0;
-		while (s2[i] != '\0')
+		while (s2[k] != '\0')
 		{
-			new_string[j] = s2[i];
-			i++, j++;
+			new_string[j] = s2[k];
+			k++, j++;
 		}
 	}
 	else
@@ -82,18 +81,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		new_string = malloc(sizeof(char) * (len1 + n));
 		if (new_string == NULL)
 			return (NULL);
-		while (s1[i] != '\0' )
+		while (s1[i] != '\0')
 		{
 			new_string[j] = s1[i];
 			i++, j++;
 		}
-		i = 0;
 		while (n != 0)
 		{
-			new_string[j] = s2[i];
-			i++, j++, n--;
+			new_string[j] = s2[l];
+			l++, j++, n--;
 		}
 	}
-
 	return (new_string);
 }
