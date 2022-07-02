@@ -70,7 +70,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		len2++;
 	}
-	new_string = malloc(sizeof(char) * (len1 + len2));
+	new_string = malloc(sizeof(char) * (len1 + len2 + 1));
 
 	if (new_string == NULL)
 	{
