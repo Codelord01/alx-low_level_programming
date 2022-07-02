@@ -34,7 +34,7 @@ char *check_null(char *s1, char *s2)
 		new = malloc(sizeof(char) * sizeof(s2 - 1));
 		if (new == NULL)
 			return (NULL);
-		while (s[j] != '\0')
+		while (s2[j] != '\0')
 		{
 			new[j] = s2[j];
 			j++;
