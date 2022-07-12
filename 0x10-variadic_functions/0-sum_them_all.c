@@ -1,12 +1,9 @@
-#include<stdio.h>
 #include<stdarg.h>
-#include<stdlib.h>
 
 /**
  * sum_them_all - function that sums all its arguments
  * @n: indicates numbers of arguments
- * @...: indicates variable arguments
- * Return: returns the sum of all the values
+ * Return: returns the sum of all its parameters
  **/
 
 int sum_them_all(const unsigned int n, ...)
